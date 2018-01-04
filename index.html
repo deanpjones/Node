@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node.js</title>
+    
+      <!-- LOADING SCRIPTS  -->
+    <!-- <script src="/js/processing.js"></script> -->
+    <!-- <script src="/js/phaser.min.js"></script> -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+    <!-- ************************************************************ -->
+    <!-- SERVER333.JS is a good one for help loading these JS and CSS -->
+    <!-- ************************************************************ -->
+    
+</head>
+<body>
+    <p>
+        BOOK: Learning Node.js, Marc Wandschneider <br />
+        Jan.04, 2018 <br />
+        Dean Jones, Awesome Programmer Extraordinaire <br />
+    </p>
+    <script>
+        //**********************
+        //CLASS 
+        function Shape(){
+        }
+
+        Shape.prototype.X = 0;
+        Shape.prototype.Y = 0;
+
+        Shape.prototype.move = function(x, y){
+            this.X = x;
+            this.Y = y;
+        }
+
+        Shape.prototype.distance_from_origin = function(){
+            return Math.sqrt(this.X * this.X + this.Y * this.Y);
+        }
+
+        Shape.prototype.area = function(){
+            throw new Error("I don't have a form yet");
+        }
+        //**********************
+
+        //**********************
+        //CLASS (INHERITANCE)
+        function Square(){
+        }
+
+        Square.prototype = new Shape();     //INHERITANCE (this is borrowing everything from SHAPE OBJECT)
+        Square.prototype.__proto__ = Shape.prototype;
+        //?? are these two lines doing the same thing?
+        
+        //**********************
+    </script>
+</body>
+</html>
