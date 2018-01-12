@@ -18,7 +18,8 @@ http.createServer(function (request, response) {
     //GET URL FOR FILEPATH
     var filePath = '.' + request.url;
     if (filePath == './')
-        filePath = './index.html';
+        //filePath = './index.html';
+        filePath = './svg/rect.html';
 
 
     //SET CONTENTTYPE
@@ -68,5 +69,5 @@ http.createServer(function (request, response) {
         }
     });
 
-}).listen(8125);
+}).listen(8080);
 console.log('Server running at http://127.0.0.1:8080/');

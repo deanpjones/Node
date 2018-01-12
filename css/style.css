@@ -152,6 +152,8 @@ svg {
 svg text {
     font-family: "Verdana";
     font-size: "20";
+    /* text-anchor: "middle"; */
+    /* alignment-baseline: "middle"; */
 }
 
 svg circle {
@@ -232,7 +234,28 @@ body > div
     transform: rotateZ(-30deg);         /* Edge, Firefox 16, Safari 9, Chrome 36, IE 10, Opera 12.1 */
 }
 
-.shrink:hover
+.shrinkXS:hover
+{
+    -webkit-transform: scale(0.98);      /* Safari 3.1, Chrome, Opera 12 */
+    -ms-transform: scale(0.98);          /* IE 9-9 */
+    transform: scale(0.98);              /* Edge, Firefox 16, Safari 9, Chrome 36, IE 10, Opera 12.1 */
+}
+
+.shrinkS:hover
+{
+    -webkit-transform: scale(0.95);      /* Safari 3.1, Chrome, Opera 12 */
+    -ms-transform: scale(0.95);          /* IE 9-9 */
+    transform: scale(0.95);              /* Edge, Firefox 16, Safari 9, Chrome 36, IE 10, Opera 12.1 */
+}
+
+.shrinkM:hover
+{
+    -webkit-transform: scale(0.9);      /* Safari 3.1, Chrome, Opera 12 */
+    -ms-transform: scale(0.9);          /* IE 9-9 */
+    transform: scale(0.9);              /* Edge, Firefox 16, Safari 9, Chrome 36, IE 10, Opera 12.1 */
+}
+
+.shrinkL:hover
 {
     -webkit-transform: scale(0.8);      /* Safari 3.1, Chrome, Opera 12 */
     -ms-transform: scale(0.8);          /* IE 9-9 */
