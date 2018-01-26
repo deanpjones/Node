@@ -103,8 +103,8 @@ svg:hover #id1  {
 /* SVG REFERENCE https://developer.mozilla.org/en-US/docs/Web/SVG/Element */
 
 svg {
-    width: "400"; 
-    height: "400";
+    width: 400; 
+    height: 400;
     /*background-color: rgb(190, 190, 190);*/
     /* float: right; */
 }
@@ -156,6 +156,22 @@ svg text {
     /* alignment-baseline: "middle"; */
 }
 
+svg rect {
+    /* transform: translate(50,50); */    /* centering? */ 
+    /* transform-origin: 50% 50%;          doesn't work (not supported in SVG 1.1?) */
+    /* transform-origin: center;           animations will center on ELEMENTS */
+}
+
+use[href*="#cell"]:hover{
+    transition:all 1s ease-in-out; 
+    stroke: yellow;
+    stroke-width: "10";
+    /* transform: translate(50,50); */
+    /* -webkit-transform-origin-x: 50; */
+    /* transformOrigin:"center center" */
+    /* transform: scale(0.98);          scale, grow */
+}
+
 svg circle {
     stroke: "black"; 
     fill: "red"; 
@@ -189,6 +205,10 @@ svg path {
 svg.center {
     text-anchor: middle;
     alignment-baseline: middle;
+}
+
+svg.fillYellow:hover {
+    fill: #bbbe0c;
 }
 
 /* EFFECTS */ 

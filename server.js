@@ -19,8 +19,9 @@ http.createServer(function (request, response) {
     var filePath = '.' + request.url;
     if (filePath == './')
         //filePath = './index.html';
-        filePath = './svg/rect.html';
-
+        //filePath = './svg/rect.html';
+        //filePath = './maze/maze.html';
+        filePath = './login/login.html';
 
     //SET CONTENTTYPE
     var extname = path.extname(filePath);
@@ -43,6 +44,9 @@ http.createServer(function (request, response) {
             break;
         case '.wav':
             contentType = 'audio/wav';
+            break;
+        case '.svg':
+            contentType = 'image/svg+xml';
             break;
     }
 
